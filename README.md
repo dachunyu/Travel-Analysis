@@ -133,6 +133,7 @@ python manage.py runserver
 ## スクリーンショット / Screenshots
 
 <img width="2974" height="1996" alt="1630071777890087_ pic" src="https://github.com/user-attachments/assets/811be619-d8db-49c7-b5b2-a709d26f10e1" />
+
 <img width="2974" height="1996" alt="1630081777890087_ pic" src="https://github.com/user-attachments/assets/68b1e157-fb18-4045-acad-066378d678e9" />
 
 <img width="2974" height="1996" alt="1630091777890087_ pic" src="https://github.com/user-attachments/assets/018617cd-b150-47c2-bcb4-26a84e292f8c" />
@@ -147,19 +148,7 @@ python manage.py runserver
 
 <img width="2974" height="1996" alt="1630151777890088_ pic" src="https://github.com/user-attachments/assets/a51e8f78-38d5-4254-9c1c-e44e6ed360fa" />
 
-## スクリーンショット / Screenshots
 
-| ホーム画面 | 中国スポット一覧 |
-|:---:|:---:|
-| ![home](docs/01_home.jpg) | ![list_cn](docs/02_list_china.jpg) |
-
-| 日本スポット一覧 | スポット詳細・地図 |
-|:---:|:---:|
-| ![list_jp](docs/03_list_japan.jpg) | ![detail](docs/04_detail_map.jpg) |
-
-| データ分析 | AI旅行ルート推薦 |
-|:---:|:---:|
-| ![analytics](docs/05_analytics.jpg) | ![ai](docs/07_ai_result.jpg) |
 
 ## 今後の改善 / Future Improvements
 
