@@ -137,12 +137,14 @@ python manage.py runserver
 <img width="2974" height="1996" alt="システムホームページ" src="https://github.com/user-attachments/assets/811be619-d8db-49c7-b5b2-a709d26f10e1" />
 
 ### 2. 観光スポット一覧・検索機能 / Attraction List & Search
-5,558件の観光スポットを検索・フィルタリングできます。都市、評価、価格帯などで絞り込み可能。
+5,558件の観光スポットを検索・フィルタリングできます。キーワード・地域（国／都市）で観光地を検索し、一覧形式で表示できます。
+各スポットの評価・所在地・料金などを確認し、詳細ページへ遷移可能です。
 <img width="2974" height="1996" alt="観光スポット検索" src="https://github.com/user-attachments/assets/68b1e157-fb18-4045-acad-066378d678e9" />
+
+<img width="2974" height="1996" alt="データ可視化" src="https://github.com/user-attachments/assets/018617cd-b150-47c2-bcb4-26a84e292f8c" />
 
 ### 3. データ可視化ダッシュボード / Data Visualization Dashboard
 EChartsを使用した評価スコア分布、都市別ランキング、価格帯分析などのインタラクティブなグラフ表示。
-<img width="2974" height="1996" alt="データ可視化" src="https://github.com/user-attachments/assets/018617cd-b150-47c2-bcb4-26a84e292f8c" />
 
 ### 4. 観光スポット詳細情報 / Attraction Details
 各観光スポットの詳細情報（住所、評価、レビュー数、チケット価格、地図位置など）を表示。
