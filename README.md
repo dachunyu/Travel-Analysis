@@ -145,6 +145,7 @@ python manage.py runserver
 
 ### 3. データ可視化ダッシュボード / Data Visualization Dashboard
 EChartsを使用した評価スコア分布、都市別ランキング、価格帯分析などのインタラクティブなグラフ表示。
+<img width="2974" height="1996" alt="地図表示" src="https://github.com/user-attachments/assets/b8dacf0c-7dc8-4873-a4fb-7125a855505a" />
 
 ### 4. 観光スポット詳細情報 / Attraction Details
 各観光スポットの詳細情報（住所、評価、レビュー数、チケット価格、地図位置など）を表示。
@@ -156,7 +157,7 @@ DeepSeek大規模言語モデルを活用し、予算・日程・季節に基づ
 
 ### 6. 地図表示機能 / Map Visualization
 百度地図APIを統合し、観光スポットの地理的分布と推薦ルートを可視化。
-<img width="2974" height="1996" alt="地図表示" src="https://github.com/user-attachments/assets/b8dacf0c-7dc8-4873-a4fb-7125a855505a" />
+
 
 ### 7. 管理画面（SimpleUI） / Admin Panel
 SimpleUIで美化された管理画面。観光スポットデータの追加・編集・削除が可能。
