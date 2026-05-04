@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %}AI路线推荐{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card p-4 mb-4">
+            <h4 class="fw-bold mb-4"><i class="fas fa-robot text-primary me-2"></i>AI智能旅游路线推荐</h4>
+            <form id="aiForm">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">目标城市</label>
+                        <input type="text" id="city" class="form-control" placeholder="例如：成都"
+                            value="{{ request.GET.city }}">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">旅游季节</label>
+                        <select id="season" class="form-select">
+                            <option value="春季">春季（3-5月）</option>
+                            <option value="夏季">夏季（6-8月）</option>
+                            <option value="秋季">秋季（9-11月）</option>
+                            <option value="冬季">冬季（12-2月）</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">行程天数</label>
+                        <select id="days" class="form-select">
+                            <option value="1天">1天</option>
+                            <option value="2天">2天</option>
+                            <option value="3天" selected>3天</option>
+                            <option value="5天">5天</option>
+                            <option value="7天">7天</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">预算（元）</label>
+                        <select id="budget" class="form-select">
+                            <option value="500元以内">500元以内</option>
+                            <option value="500-1000元" selected>500-1000元</option>
+                            <option value="1000-3000元">1000-3000元</option>
+                            <option value="3000元以上">3000元以上</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button type="button" onclick="getRecommend()" class="btn btn-primary w-100">
+                            <i class="fas fa-magic me-2"></i>生成AI路线推荐
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- 结果展示 -->
+        <div id="resultCard" class="card p-4" style="display:none;">
+            <h5 class="fw-bold mb-3"><i class="fas fa-map-marked-alt text-primary me-2"></i>推荐路线</h5>
+            <div id="loadingSpinner" class="text-center py-4" style="display:none;">
+                <div class="spinner-border text-primary" role="status"></div>
+                <p class="mt-2 text-muted">AI正在规划路线，请稍候...</p>
+            </div>
+            <div id="resultContent" class="markdown-content"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    async function getRecommend() {
+        const city = document.getElementById('city').value;
+        const season = document.getElementById('season').value;
+        const days = document.getElementById('days').value;
+        const budget = document.getElementById('budget').value;
+
+        if (!city) {
+            alert('请输入目标城市！');
+            return;
+        }
+
+        document.getElementById('resultCard').style.display = 'block';
+        document.getElementById('loadingSpinner').style.display = 'block';
+        document.getElementById('resultContent').innerHTML = '';
+
+        try {
+            const response = await fetch('/travel/ai/generate/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ city, season, days, budget })
+            });
+            const data = await response.json();
+            document.getElementById('loadingSpinner').style.display = 'none';
+            document.getElementById('resultContent').innerHTML =
+                data.result.replace(/\n/g, '<br>').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        } catch (e) {
+            document.getElementById('loadingSpinner').style.display = 'none';
+            document.getElementById('resultContent').innerHTML = '<p class="text-danger">生成失败，请重试</p>';
+        }
+    }
+
+    function getCookie(name) {
+        let value = '; ' + document.cookie;
+        let parts = value.split('; ' + name + '=');
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+</script>
+{% endblock %}

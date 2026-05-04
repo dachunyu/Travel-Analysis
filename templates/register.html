@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}注册{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <div class="card p-4">
+            <div class="text-center mb-4">
+                <i class="fas fa-user-plus fa-3x text-primary mb-3"></i>
+                <h4 class="fw-bold">注册账号</h4>
+                <p class="text-muted">旅游景点分析系统</p>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">用户名</label>
+                    <input type="text" name="username" class="form-control" placeholder="请输入用户名" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">密码</label>
+                    <input type="password" name="password" class="form-control" placeholder="请输入密码" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">确认密码</label>
+                    <input type="password" name="password2" class="form-control" placeholder="请再次输入密码" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3">注册</button>
+                <div class="text-center">
+                    <span class="text-muted">已有账号？</span>
+                    <a href="/login/">立即登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

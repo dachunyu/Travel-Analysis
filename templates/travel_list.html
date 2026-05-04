@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}景点浏览{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 mb-4">
+        <div class="card p-3">
+            <form method="get" class="row g-2 align-items-center">
+                <div class="col-md-4">
+                    <input type="text" name="keyword" class="form-control" placeholder="搜索景点名称..." value="{{ keyword }}">
+                </div>
+                <div class="col-md-3">
+                    <select name="province" class="form-select">
+                        <option value="">全部省份</option>
+                        {% for p in provinces %}
+                        <option value="{{ p }}" {% if p == province %}selected{% endif %}>{{ p }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <select name="city" class="form-select">
+                        <option value="">全部城市</option>
+                        {% for c in cities %}
+                        <option value="{{ c }}" {% if c == city %}selected{% endif %}>{{ c }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">搜索</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% for travel in travels %}
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h6 class="card-title fw-bold">{{ travel.name }}</h6>
+                <p class="text-muted small mb-1">
+                    <i class="fas fa-map-marker-alt me-1"></i>{{ travel.province }} · {{ travel.city }}
+                </p>
+                <p class="text-muted small mb-2">
+                    <i class="fas fa-star text-warning me-1"></i>{{ travel.rating|default:"暂无" }}
+                    <span class="ms-2"><i class="fas fa-ticket-alt me-1"></i>
+                    {% if travel.price == 0 %}免费{% else %}¥{{ travel.price }}{% endif %}
+                    </span>
+                </p>
+                <p class="small text-muted text-truncate">{{ travel.tags|default:"暂无标签" }}</p>
+            </div>
+            <div class="card-footer bg-transparent">
+                <a href="/travel/detail/{{ travel.id }}/" class="btn btn-outline-primary btn-sm w-100">查看详情</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<nav class="mt-4">
+    <ul class="pagination justify-content-center">
+        {% if travels.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ travels.previous_page_number }}&keyword={{ keyword }}&province={{ province }}&city={{ city }}">上一页</a>
+        </li>
+        {% endif %}
+        <li class="page-item active">
+            <span class="page-link">{{ travels.number }} / {{ travels.paginator.num_pages }}</span>
+        </li>
+        {% if travels.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ travels.next_page_number }}&keyword={{ keyword }}&province={{ province }}&city={{ city }}">下一页</a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endblock %}
