@@ -132,7 +132,23 @@ python manage.py runserver
 
 ## スクリーンショット / Screenshots
 
-（プロジェクトのスクリーンショットをここに追加）
+<img width="2974" height="1996" alt="1630071777890087_ pic" src="https://github.com/user-attachments/assets/811be619-d8db-49c7-b5b2-a709d26f10e1" />
+<img width="2974" height="1996" alt="1630081777890087_ pic" src="https://github.com/user-attachments/assets/68b1e157-fb18-4045-acad-066378d678e9" />
+
+<img width="2974" height="1996" alt="1630091777890087_ pic" src="https://github.com/user-attachments/assets/018617cd-b150-47c2-bcb4-26a84e292f8c" />
+
+<img width="2960" height="1990" alt="1630101777890087_ pic" src="https://github.com/user-attachments/assets/194c47c4-5829-4f9e-b2c2-aed974c4f5c9" />
+
+<img width="2974" height="1996" alt="1630111777890088_ pic" src="https://github.com/user-attachments/assets/145e575f-76ef-492c-bf5c-20b72b96da12" />
+
+<img width="2974" height="1996" alt="1630121777890088_ pic" src="https://github.com/user-attachments/assets/b8dacf0c-7dc8-4873-a4fb-7125a855505a" />
+
+
+
+
+
+
+
 
 ## 今後の改善 / Future Improvements
 
