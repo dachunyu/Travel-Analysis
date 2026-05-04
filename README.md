@@ -133,7 +133,7 @@ python manage.py runserver
 ## スクリーンショット / Screenshots
 
 ### 1. システムホームページ / System Homepage
-システムのメインページ。観光スポット検索、データ分析、AI推薦機能へのアクセスポイントを提供します。
+観光地の検索・分析・AIルート提案を一体化したWebアプリです。
 <img width="2974" height="1996" alt="システムホームページ" src="https://github.com/user-attachments/assets/811be619-d8db-49c7-b5b2-a709d26f10e1" />
 
 ### 2. 観光スポット一覧・検索機能 / Attraction List & Search
