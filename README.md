@@ -143,12 +143,23 @@ python manage.py runserver
 
 <img width="2974" height="1996" alt="1630121777890088_ pic" src="https://github.com/user-attachments/assets/b8dacf0c-7dc8-4873-a4fb-7125a855505a" />
 
+<img width="2974" height="1996" alt="1630131777890088_ pic" src="https://github.com/user-attachments/assets/84bde1d9-b8ef-45e7-a437-d39b9809f889" />
 
+<img width="2974" height="1996" alt="1630151777890088_ pic" src="https://github.com/user-attachments/assets/a51e8f78-38d5-4254-9c1c-e44e6ed360fa" />
 
+## スクリーンショット / Screenshots
 
+| ホーム画面 | 中国スポット一覧 |
+|:---:|:---:|
+| ![home](docs/01_home.jpg) | ![list_cn](docs/02_list_china.jpg) |
 
+| 日本スポット一覧 | スポット詳細・地図 |
+|:---:|:---:|
+| ![list_jp](docs/03_list_japan.jpg) | ![detail](docs/04_detail_map.jpg) |
 
-
+| データ分析 | AI旅行ルート推薦 |
+|:---:|:---:|
+| ![analytics](docs/05_analytics.jpg) | ![ai](docs/07_ai_result.jpg) |
 
 ## 今後の改善 / Future Improvements
 
