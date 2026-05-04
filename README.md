@@ -140,32 +140,29 @@ python manage.py runserver
 5,558件の観光スポットを検索・フィルタリングできます。キーワード・地域（国／都市）で観光地を検索し、一覧形式で表示できます。
 各スポットの評価・所在地・料金などを確認し、詳細ページへ遷移可能です。
 <img width="2974" height="1996" alt="観光スポット検索" src="https://github.com/user-attachments/assets/68b1e157-fb18-4045-acad-066378d678e9" />
-
 <img width="2974" height="1996" alt="データ可視化" src="https://github.com/user-attachments/assets/018617cd-b150-47c2-bcb4-26a84e292f8c" />
 
 ### 3. データ可視化ダッシュボード / Data Visualization Dashboard
 EChartsを使用した評価スコア分布、都市別ランキング、価格帯分析などのインタラクティブなグラフ表示。
 <img width="2974" height="1996" alt="地図表示" src="https://github.com/user-attachments/assets/b8dacf0c-7dc8-4873-a4fb-7125a855505a" />
 
-### 4. 観光スポット詳細情報 / Attraction Details
-各観光スポットの詳細情報（住所、評価、レビュー数、チケット価格、地図位置など）を表示。
+### 4. 管理画面（SimpleUI） / Admin Panel
+SimpleUIで美化された管理画面。観光スポットデータの追加・編集・削除が可能。
 <img width="2960" height="1990" alt="詳細情報ページ" src="https://github.com/user-attachments/assets/194c47c4-5829-4f9e-b2c2-aed974c4f5c9" />
 
 ### 5. AI旅行ルート推薦システム / AI Route Recommendation
 DeepSeek大規模言語モデルを活用し、予算・日程・季節に基づいてパーソナライズされた旅行プランを生成。
 <img width="2974" height="1996" alt="管理画面" src="https://github.com/user-attachments/assets/84bde1d9-b8ef-45e7-a437-d39b9809f889" />
+<img width="2974" height="1996" alt="ユーザー認証" src="https://github.com/user-attachments/assets/a51e8f78-38d5-4254-9c1c-e44e6ed360fa" />
 
 ### 6. 地図表示機能 / Map Visualization
 百度地図APIを統合し、観光スポットの地理的分布と推薦ルートを可視化。
 <img width="2974" height="1996" alt="AI推薦システム" src="https://github.com/user-attachments/assets/145e575f-76ef-492c-bf5c-20b72b96da12" />
 
-### 7. 管理画面（SimpleUI） / Admin Panel
-SimpleUIで美化された管理画面。観光スポットデータの追加・編集・削除が可能。
-
-
-### 8. ユーザー認証システム / User Authentication
+### 7.ユーザー認証システム / User Authentication
 ユーザー登録・ログイン機能。セキュアな認証システムでユーザー情報を管理。
-<img width="2974" height="1996" alt="ユーザー認証" src="https://github.com/user-attachments/assets/a51e8f78-38d5-4254-9c1c-e44e6ed360fa" />
+<img width="2974" height="1996" alt="WeChata764f380c181b75877ff85cb2d927318" src="https://github.com/user-attachments/assets/c51b44af-6752-438e-aec2-5f901337960f" />
+
 
 
 
