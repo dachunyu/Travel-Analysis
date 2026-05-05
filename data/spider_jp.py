@@ -52,14 +52,14 @@ def get_attractions(city, max_results=20):
                 }
                 results.append(item)
         elif data.get('status') == 'OVER_QUERY_LIMIT':
-            print(f"⚠️ {city} API配额已用完，请稍后再试")
+            print(f"{city} API配额已用完，请稍后再试")
         elif data.get('status') == 'REQUEST_DENIED':
-            print(f"⚠️ {city} 请求被拒绝，请检查API密钥")
+            print(f"{city} 请求被拒绝，请检查API密钥")
         else:
-            print(f"⚠️ {city} 状态: {data.get('status')}")
+            print(f"{city} 状态: {data.get('status')}")
 
     except Exception as e:
-        print(f"❌ {city} 请求失败: {e}")
+        print(f"{city} 请求失败: {e}")
 
     return results
 
@@ -68,7 +68,7 @@ if os.path.exists('data_jp.csv'):
     existing_df = pd.read_csv('data_jp.csv', encoding='utf-8-sig')
     all_data = existing_df.to_dict('records')
     crawled_cities = set(existing_df['城市名称'].unique())
-    print(f"📂 已加载现有数据：{len(all_data)} 条，已爬取城市：{crawled_cities}")
+    print(f"已加载现有数据：{len(all_data)} 条，已爬取城市：{crawled_cities}")
 else:
     all_data = []
     crawled_cities = set()
@@ -76,7 +76,7 @@ else:
 
 for i, city in enumerate(CITIES, 1):
     if city in crawled_cities:
-        print(f"⏭️  [{i}/{len(CITIES)}] {city} 已爬取，跳过")
+        print(f"[{i}/{len(CITIES)}] {city} 已爬取，跳过")
         continue
 
     print(f"🔄 [{i}/{len(CITIES)}] 正在获取 {city} 的景点数据...")
@@ -84,7 +84,7 @@ for i, city in enumerate(CITIES, 1):
 
     if pois:
         all_data.extend(pois)
-        print(f"✅ {city} 完成，获取 {len(pois)} 条，当前共 {len(all_data)} 条")
+        print(f"{city} 完成，获取 {len(pois)} 条，当前共 {len(all_data)} 条")
 
        
         df = pd.DataFrame(all_data)
@@ -97,7 +97,7 @@ for i, city in enumerate(CITIES, 1):
     else:
         delay = 1.5
 
-    print(f"⏳ 等待 {delay} 秒...")
+    print(f"等待 {delay} 秒...")
     time.sleep(delay)
 
 print(f"\n爬取完成！共 {len(all_data)} 条数据，已保存到 data_jp.csv")
