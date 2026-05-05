@@ -66,7 +66,6 @@ for city in CITIES:
         time.sleep(0.5)  # 避免请求太快
     print(f"{city} 完成，当前共 {len(all_data)} 条数据")
 
-# 保存原始数据
 df = pd.DataFrame(all_data)
 df.to_csv('data.csv', index=False, encoding='utf-8-sig')
 print(f"\n爬取完成！共 {len(df)} 条数据，已保存到 data/data.csv")
