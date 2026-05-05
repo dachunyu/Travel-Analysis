@@ -36,7 +36,3 @@ def register_view(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
-
-#def logout_view(request):
- #   logout(request)
-  #  return redirect('login')
