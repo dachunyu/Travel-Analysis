@@ -38,33 +38,10 @@ def travel_detail(request, pk):
     travel = get_object_or_404(TravelInfo, pk=pk)
     return render(request, 'travel_detail.html', {'travel': travel})
 
-#用户点击某个景点
-#↓
-#访问 /travel/detail/5/
-#↓
-#Django把 5 传给 pk
-#↓
-#get_object_or_404 查数据库
-#↓
-#找到这条数据
-#↓
-#render 渲染页面
-#↓
-#显示详情
 
 @login_required
 def ai_recommend(request):
     return render(request, 'ai_recommend.html')
-
-#数据库 → queryset
-#↓
-#分页 → travels
-#↓
-#提取城市 → cities
-#↓
-#render → 传给 HTML
-#↓
-#HTML 显示数据
 
 import json
 from django.http import JsonResponse
